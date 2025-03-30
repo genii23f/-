@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электроника Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        header {
+            background: linear-gradient(45deg, #2c3e50, #3498db);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background: #34495e;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.3s;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: contain;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            color: #e74c3c;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .buy-btn {
+            background: #2ecc71;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .buy-btn:hover {
+            background: #27ae60;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .products {
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Электроника Store</h1>
+        <p>Лучшие товары по выгодным ценам</p>
+    </header>
+
+    <nav>
+        <a href="#smartphones">Смартфоны</a>
+        <a href="#laptops">Ноутбуки</a>
+        <a href="#accessories">Аксессуары</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+
+    <div class="products">
+        <div class="product-card">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-graphite-select?wid=470&hei=556&fmt=jpeg&qlt=95&.v=1645552346288" alt="iPhone 13 Pro">
+            <h3>iPhone 13 Pro</h3>
+            <p>6.1" OLED дисплей, A15 Bionic, 128GB</p>
+            <div class="price">89 999 ₽</div>
+            <button class="buy-btn">Купить</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-spacegray-select-202206?wid=452&hei=420&fmt=jpeg&qlt=95&.v=1664497359481" alt="MacBook Pro">
+            <h3>MacBook Pro</h3>
+            <p>14" Retina display, M1 Pro, 512GB SSD</p>
+            <div class="price">129 999 ₽</div>
+            <button class="buy-btn">Купить</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1660803972361" alt="AirPods Pro">
+            <h3>AirPods Pro</h3>
+            <p>Active Noise Cancellation, Spatial Audio</p>
+            <div class="price">19 999 ₽</div>
+            <button class="buy-btn">Купить</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-air-select-wifi-blue-202203?wid=470&hei=556&fmt=png-alpha&.v=1645065732688" alt="iPad Air">
+            <h3>iPad Air</h3>
+            <p>10.9" Liquid Retina, M1 chip, 256GB</p>
+            <div class="price">54 999 ₽</div>
+            <button class="buy-btn">Купить</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-watch-series-7-cell-41mm-midnight-aluminum-midnight-sport-band-pdp-image-position-1?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1646075837000" alt="Apple Watch">
+            <h3>Apple Watch Series 7</h3>
+            <p>41mm, Always-On Retina display</p>
+            <div class="price">34 999 ₽</div>
+            <button class="buy-btn">Купить</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHLM3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1623348211000" alt="Magic Keyboard">
+            <h3>Magic Keyboard</h3>
+            <p>Беспроводная клавиатура с Touch ID</p>
+            <div class="price">12 999 ₽</div>
+            <button class="buy-btn">Купить</button>
+        </div>
+    </div>
+
+    <footer>
+        <h3>Контакты</h3>
+        <p>Телефон: +7 (999) 123-45-67</p>
+        <p>Email: info@electronics-store.ru</p>
+        <p>Адрес: г. Москва, ул. Примерная, д. 123</p>
+    </footer>
+</body>
+</html>
